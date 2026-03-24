@@ -1,0 +1,141 @@
+/* Reset basic styles for consistency */
+body, h1, h2, p, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Text styles for "COMBAT FITNESS" */
+.main-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Added Impact here */
+    font-size: 42px; /* Increased slightly to match Impact's bold look */
+    font-weight: normal; /* Impact is naturally bold, so 'normal' often looks cleaner */
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+    font-family: Arial, sans-serif;
+}
+
+/* Page background styles */
+body {
+    /* Set up the background image and its appearance */
+   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* This puts the image in the background */
+    background-image: url('builder.webp');
+    filter: blur(80);
+    background-size: cover;
+    background-position: center;
+    
+
+   
+    
+    /* Centering the main form on the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .full-page-background {
+    /* This makes the div fill the entire screen */
+    width: 100vw;
+    height: 100vh;
+    
+    /* This centers the login box on top of the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+/* Styles for the dark gray login form container */
+.login-container {
+    background-color: #333333; /* Dark gray */
+    color: white; /* Default text color in form */
+    width: 90%; /* For mobile responsiveness */
+    max-width: 450px; /* Maximum size on larger screens */
+    padding: 80px;
+    border-radius: 15px; /* Smooth rounded corners */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Text styles for Main Tite */
+.main-title {
+    font-size: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Styles for the "LOGIN" sub-header */
+.form-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+/* General styles for both email and password input fields */
+.input-field {
+    width: 100%;
+    background-color: #404040; /* Darker gray background */
+    color: white; /* Text color *while* typing */
+    border: 2px solid #FF0000; /* Red border from image */
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Styling for the placeholder text (the "Email Address:" and "Password:" labels) */
+.input-field::placeholder {
+    color: white; /* Placeholder is white, unlike modern grey defaults */
+    opacity: 1; /* Ensures text is solid and clear */
+}
+
+/* Removes blue outline when field is clicked */
+.input-field:focus {
+    outline: none;
+}
+
+/* Base button styles to be shared by both LOGIN and REGISTER */
+button {
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Specific styles for the large, main red LOGIN button */
+.login-btn {
+    background-color: #FF0000; /* Pure red */
+    color: white;
+    width: 20%; /* Controls the width of the button */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+/* Styles for the helper question below the button */
+.help-text {
+    font-size: 12px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Specific styles for the small red REGISTER button */
+.register-btn {
+    background-color: #FF0000; /* Pure red */
+    color: white;
+    padding: 8px 15px; /* Smaller padding for a compact size */
+    border-radius: 5px;
+}
+
