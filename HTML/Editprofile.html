@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile | Combat Fitness</title>
+    <link rel="stylesheet" href="../CSS/editprofile.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            COMBAT<span>FITNESS</span>
+        </div>
+        <nav>
+        <a href="Homepage.html">Home</a>
+        <a href="Dashboard.html" id="Dashboard-link">Dashboard</a>
+        <a href="plans.html"id="plans-link">Membership Plans</a>
+        <a href="Store.html" id="store-link">Store</a>
+        <a href="Aboutus.html">About Us</a>
+        <a href="add to cart.html" class="cart-icon"id="cart-link">
+        <img src="../Images/cart (2).png" alt="Cart-Icon">Cart</a>
+        <a href="Membership.html" class="user-icon" id="user-link">
+        <img src="../Images/usericon.svg" alt="User Profile"></a>
+
+</nav>
+    </header>
+
+    <main class="profile-grid">
+        <img src="../Images/oobg.jpg" class="bg-main">
+
+        <!-- ❌ removed action (JS handles submit) -->
+        <form class="edit-form-container">
+
+            <!-- Avatar -->
+            <div class="card edit-avatar-card">
+                <div class="avatar">
+                    <img src="../Images/planuser.png">
+                </div>
+                <input type="file" id="file-upload" hidden>
+                <label for="file-upload" class="upload-btn">Change Photo</label>
+            </div>
+
+            <!-- Personal Info -->
+            <div class="card">
+                <h2>Personal Information</h2>
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email">
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div class="card">
+                <h2>Address Information</h2>
+                <div class="input-group">
+                    <label>Street Address</label>
+                    <input type="text" id="address">
+                </div>
+                <div class="input-group">
+                    <label>Province</label>
+                    <input type="text" id="province">
+                </div>
+                <div class="input-group">
+                    <label>City</label>
+                    <input type="text" id="city">
+                </div>
+                <div class="input-group">
+                    <label>Postal Code</label>
+                    <input type="text" id="postal">
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="card">
+                <h2>Contact Details</h2>
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="text" id="phone">
+                </div>
+                <div class="input-group">
+                    <label>Emergency Contact</label>
+                    <input type="text" id="emergency">
+                </div>
+            </div>
+
+            <!-- Banking -->
+            <div class="card banking-card">
+                <h2>Banking Preferences</h2>
+                <div class="input-group">
+                    <label>Bank Name</label>
+                    <input type="text" id="bank">
+                </div>
+                <div class="input-group">
+                    <label>Account Holder Name</label>
+                    <input type="text" id="accountName">
+                </div>
+                <div class="input-group">
+                    <label>Card Number</label>
+                    <input type="text" id="card">
+                </div>
+                <div class="input-group">
+                    <label>Card Type</label>
+                    <input type="text" id="cardType">
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="form-actions">
+                <a href="Membership.html" class="cancel-btn">Cancel</a>
+                <button type="submit">Save Changes</button>
+            </div>
+
+        </form>
+    </main>
+
+
+
+    <script src="../Javascript/editprofile.js"></script>
+<script src="../Javascript/loginchecker.js"></script>
+</body>
+
+</html>

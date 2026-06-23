@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Gym Scanner</title>
+  <link rel="stylesheet" href="../CSS/scanner.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Gym Scanner</h1>
+    <span id="clock">--:--</span>
+  </header>
+
+  <div class="container">
+
+    <div class="metric-row">
+      <div class="metric">
+        <div class="val" id="m-now">0</div>
+        <div class="lbl">In gym</div>
+      </div>
+      <div class="metric">
+        <div class="val" id="m-in">0</div>
+        <div class="lbl">In today</div>
+      </div>
+      <div class="metric">
+        <div class="val" id="m-out">0</div>
+        <div class="lbl">Out today</div>
+      </div>
+    </div>
+
+    <div class="banner" id="banner"></div>
+
+    <div class="camera-wrap" id="camWrap">
+      <div class="placeholder" id="placeholder">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.5">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+          <circle cx="12" cy="13" r="4" />
+        </svg>
+        <p>Click "Start camera" to begin</p>
+      </div>
+      <video id="video" autoplay playsinline muted style="display:none;"></video>
+      <canvas id="overlay"></canvas>
+      <div class="viewfinder" id="viewfinder" style="display:none;">
+        <div class="vf-box">
+          <div class="corner tl"></div>
+          <div class="corner tr"></div>
+          <div class="corner bl"></div>
+          <div class="corner br"></div>
+        </div>
+        <div class="vf-label">Point at membership barcode</div>
+      </div>
+    </div>
+    <div id="debug">Ready</div>
+
+    <div class="btn-row">
+      <button class="btn btn-dark" id="camBtn" onclick="toggleCamera()">
+       Start camera
+      </button>
+      <button class="btn btn-green" onclick="doAction('in')"> Check in</button>
+    </div>
+    <p style="font-size:12px;color:#aaa;text-align:center;margin-bottom:4px;">Scan a barcode, then tap Check in or Check
+      out</p>
+
+    <div class="section-label">Recent activity</div>
+    <div class="log" id="log">
+      <div class="empty">No scans yet today</div>
+    </div>
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/quagga@0.12.1/dist/quagga.min.js"></script>
+  <script src="../JS/scanner.js"></script>
+</body>
+
+</html>

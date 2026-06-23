@@ -1,0 +1,394 @@
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 12px;
+}
+
+/* ── Filter Tabs ── */
+.filter-tabs {
+    display: flex;
+    gap: 6px;
+}
+
+.filter-tab {
+    background: var(--bg-elevated);
+    border: 1px solid var(--line);
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    padding: 7px 14px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+.filter-tab.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+/* ── FAQ List ── */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-card {
+    background: var(--bg-panel-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+}
+
+.faq-card.answered {
+    border-left: 3px solid var(--ok);
+}
+
+.faq-card.unanswered {
+    border-left: 3px solid var(--accent);
+}
+
+/* ── FAQ Card Meta ── */
+.faq-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.faq-user {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.faq-badge {
+    font-size: 10.5px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.faq-badge.answered {
+    background: var(--ok-dim);
+    color: var(--ok);
+}
+
+.faq-badge.unanswered {
+    background: var(--accent-dim);
+    color: var(--accent);
+}
+
+/* ── FAQ Content ── */
+.faq-question {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.faq-answer {
+    font-size: 13px;
+    color: var(--text-secondary);
+    background: var(--bg-elevated);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.faq-answer.empty {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* ── Answer Textarea ── */
+.answer-area {
+    width: 100%;
+    background: var(--bg-elevated);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    color: var(--text-primary);
+    font-size: 13px;
+    font-family: var(--font-body);
+    outline: none;
+    resize: vertical;
+    min-height: 80px;
+    box-sizing: border-box;
+}
+
+.answer-area:focus {
+    border-color: var(--accent);
+}
+
+/* ── FAQ Actions ── */
+.faq-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.btn-answer {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 7px 16px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+.btn-answer:hover {
+    opacity: 0.88;
+}
+
+.btn-clear {
+    background: var(--bg-elevated);
+    border: 1px solid var(--line);
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    padding: 7px 14px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+.btn-clear:hover {
+    color: var(--text-primary);
+}
+
+/* ── Messages ── */
+.msg {
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: none;
+}
+
+.msg.success {
+    background: var(--ok-dim);
+    color: var(--ok);
+    display: block;
+}
+
+.msg.error {
+    background: var(--accent-dim);
+    color: var(--accent);
+    display: block;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.faq-subject {
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.add-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 9px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    opacity: 0.88;
+}
+
+
+/* ── Overlay background ───────────────────────────────── */
+.faq-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+/* ── Modal box ────────────────────────────────────────── */
+.faq-box {
+    background: var(--bg-app);
+    border-radius: 10px;
+    padding: 28px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid #2a2a3e;
+    animation: faqSlideIn 0.2s ease;
+}
+
+@keyframes faqSlideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+}
+
+/* ── Header ───────────────────────────────────────────── */
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.faq-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+}
+
+.faq-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #888;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+}
+.faq-close:hover {
+    background: #2a2a3e;
+    color: #fff;
+}
+
+/* ── Status message ───────────────────────────────────── */
+.faq-msg {
+    display: none;
+    padding: 10px 14px;
+    border-radius: 7px;
+    margin-bottom: 16px;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+.faq-msg.success {
+    background: rgba(16, 185, 129, 0.15);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+.faq-msg.error {
+    background: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* ── Form fields ──────────────────────────────────────── */
+.faq-field {
+    margin-bottom: 16px;
+}
+
+.faq-label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #a0a0b8;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.faq-input {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1.5px solid #2a2a3e;
+    border-radius: 7px;
+    font-size: 0.93rem;
+    color: #ffffff;
+    background: var(--bg-app);
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    font-family: inherit;
+}
+
+.faq-input::placeholder {
+    color: #4a4a6a;
+}
+
+.faq-input:focus {
+    border-color: #e5533d;
+    background: #12121f;
+    box-shadow: 0 0 0 3px rgba(229, 83, 61, 0.15);
+}
+
+.faq-textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+/* ── Buttons ──────────────────────────────────────────── */
+.faq-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.faq-btn {
+    padding: 10px 22px;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s, transform 0.1s;
+    font-family: inherit;
+}
+
+.faq-btn:active {
+    transform: scale(0.97);
+}
+
+.faq-btn-cancel {
+    background: transparent;
+    color: #a0a0b8;
+    border: 1.5px solid #2a2a3e;
+}
+.faq-btn-cancel:hover {
+    background: #2a2a3e;
+    color: #fff;
+}
+
+.faq-btn-save {
+    background: #e5533d;
+    color: #ffffff;
+}
+.faq-btn-save:hover {
+    background: #cf3f29;
+}
+.faq-btn-save:disabled {
+    background: #7a2a1e;
+    cursor: not-allowed;
+    opacity: 0.7;
+}

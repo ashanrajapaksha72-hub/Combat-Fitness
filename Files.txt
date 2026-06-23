@@ -1,0 +1,237 @@
+Ashan Rajapaskasha - Sa25610689
+
+Admin Panel
+
+PHP-//dashboard
+    total_orders.PHP
+    top_product.php
+    recent_orders.php
+    total_product.php
+    total_users.php
+    faq_count.php
+
+    //ordermanagment
+    order_table.php
+    status_count.php
+    delete_order.php
+
+    //product_managment
+    get_products.php
+    delete_product.php
+
+
+    //Add Product
+    add_product.php
+
+    //Edit Order
+    Update_order.php
+    get_orders.php
+
+    
+
+
+JS-//dashboard
+   total_order.js
+   top_product.js
+   recent_order.js
+   total_product.js
+   total_users.js
+   faq_count.js
+   
+   //ordermanagment
+   order_table.js
+   status_count.js
+   delete_order.js
+
+   //product_managment
+    get_products.js
+    delete_product.js
+
+
+   //add product
+   add_product.js
+
+   //Edit Order
+   edit_order.js
+
+   //gym-scanner
+   scanner.js
+
+
+HTML-dashboard.html
+     ordermanagment.html
+     product_managment.html
+     Faqmanagement.html
+     add_product.html
+     edit_order.html
+     gym-scanner.html
+
+
+User Website - Combat Fitness
+
+PHP-//store
+    products.php
+
+    //productdetail
+    product_detail.php
+
+    //checkout
+    save_order.php
+
+    //faqpage
+    fetch_faq.php
+
+    //ordertracking
+    get_orders.php
+
+    //orderhistory
+    get_orders.php
+
+    //paymenthistory
+    get_payment_history.php
+
+    //purchase button
+    get_checkout_data.php
+
+    
+
+JS-//store
+    Store.js
+
+    //productdetail
+    productdetail.js
+
+    // add to cart
+    cart.js
+
+    //checkout
+    checkout.js
+
+    //faqpage
+    fetch_faq.js
+
+    //ordertracking
+    order_status
+
+    //orderhistory
+    orderhistory.js
+
+    //paymenthistory
+    payment_history.js
+
+    //purchase button
+    checkout_membership.js
+    
+
+
+HTML-faqpage.html
+     add to cart.html
+     checkout.html
+     orderhistory.html
+     ordertracking.html
+     store.html
+     productdetail.html
+     paymenthistory.html
+
+
+
+
+
+
+
+
+
+Theekshana Illangakoon - SA25610734
+
+Admin Panel
+
+PHP-//dashboard
+    check_admin.php
+    logout.php
+
+    //Usermanagement
+    Users.php
+
+    //FAQ Managment
+    Faq.php
+    save_faq.php
+
+JS-//dashboard
+    admindashboard.js
+    
+    //Usermanagement
+    Usermanagement.js
+
+    //FAQ Managment
+   FAQManagement.js
+   save_faq.js
+
+HTML-Usermanagement.html
+     Faqmanagement.html
+
+
+User Website - Combat Fitness
+
+PHP-//login.html
+    login.php
+
+    //register.html
+    register.php
+
+    //membership.html
+    get_profile.php
+
+    //aboutus.html
+    contact.php
+
+
+    // dashboard.html
+     get_membership.php
+
+    // plans.html
+    get_checkout_data.php
+
+
+
+    // editprofile.html
+    get_profile.php
+    update_profile.php
+
+
+JS-//login.html
+    login.js
+
+    // register.html
+    register.js
+
+    // membership.html
+    membership.js
+
+    // aboutus.html
+    inside aboutus html
+
+    // dashboard.html
+    dashboard.js
+
+    // plans.html
+    checkout_membership.js
+
+    // homepage.html
+        loginchecker.js
+
+    // editprofile.html
+    editprofile.js
+
+    //checkout_membership
+    checkout_membership.js
+
+
+HTML-login.html
+     checkout_membership.html
+     register.html
+     membership.html
+     aboutus.html
+     dashboard.html
+     plans.html
+     homepage.html
+     editprofile.html

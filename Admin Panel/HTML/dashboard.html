@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combat Fitness — Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../CSS/dashboard.css">
+
+
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><i class="fa-solid fa-dumbbell"></i></div>
+        <div class="brand-text">
+          <span class="name">COMBAT FITNESS</span>
+          <span class="tag">Admin Console</span>
+        </div>
+      </div>
+
+      <nav class="nav-scroll">
+        <div class="nav-item active" onclick="window.location.href='dashboard.html'"><i class="fa-solid fa-grid-2"></i> Dashboard</div>
+
+        <div class="nav-section-label">Management</div>
+        <div class="nav-item" onclick="window.location.href='usermanagement.html'" ><i class="fa-solid fa-users"></i> User Management </div>
+        <div class="nav-item" onclick="window.location.href='product_managment.html'" > <i class="fa-solid fa-dumbbell"></i> Product Management </div>
+        <div class="nav-item" onclick="window.location.href='ordermanagment.html'" > <i class="fa-solid fa-bag-shopping"></i> Order Management </div>
+        <div class="nav-item" onclick="window.location.href='Faqmanagement.html'"><i class="fa-solid fa-circle-question"></i> FAQ Management</div>
+        <div class="nav-item" onclick="window.location.href='gym-scanner.html'"><i class="fa-solid fa-qrcode"></i>
+          Barcode Scanner</div>
+      </nav>
+
+      <div class="logout-row">
+        <a class="logout-btn" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+      </div>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <div class="main">
+
+      <header class="topbar">
+        <div class="topbar-left">
+          <div class="page-title">Dashboard</div>
+          <span class="page-welcome">Welcome back, Admin!</span>
+        </div>
+        <div class="topbar-right">
+
+        </div>
+      </header>
+
+      <main class="content">
+
+        <!-- STAT CARDS -->
+        <section class="stat-grid" id="stat-grid">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+            <div>
+              <div class="stat-label">Total Members</div>
+              <div class="stat-value" id="stat-total-members"></div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-id-card"></i></div>
+            <div>
+              <div class="stat-label">Total Products</div>
+              <div class="stat-value" id="stat-products"></div>
+            </div>
+
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-person-running"></i></div>
+            <div>
+              <div class="stat-label">People in Gym (Live)</div>
+              <div class="stat-value" id="live-count">45 <small>/ 150</small></div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-wallet"></i></div>
+            <div>
+              <div class="stat-label">FAQ Questions</div>
+              <div class="stat-value" id="stat-faq"></div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <div>
+              <div class="stat-label">Total Orders</div>
+              <div class="stat-value" id="stat-total-orders"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PRODUCTS + RECENT ORDERS -->
+        <section class="row-two">
+          <div class="panel">
+            <span class="panel-title">Products</span>
+
+            <div class="product-list" id="product-table-body">
+              <div class="product-row"><span class="product-meta">Loading...</span></div>
+            </div>
+
+            <button class="view-all-btn" onclick="window.location.href='ordermanagment.html'" >
+              View All Products
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <span class="panel-title">Recent Orders</span>
+
+            </div>
+
+            <div class="order-list" id="order-list">
+              <div class="order-row"><span class="order-item">Loading...</span></div>
+            </div>
+
+            <button class="view-all-btn" onclick="window.location.href='ordermanagment.html'">View All Orders <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </section>
+
+        <!-- RECENT MEMBERS + QUICK ACTIONS -->
+        <section class="row-bottom">
+          <div class="panel">
+
+
+
+            <div class="panel">
+              <div class="panel-head">
+                <span class="panel-title">Quick Actions</span>
+              </div>
+              <div class="qa-grid">
+                <div class="qa-card" onclick="window.location.href='usermanagement.html'">
+                  <div class="qa-icon" ><i class="fa-solid fa-user-plus"></i></div>
+                  <span class="qa-label">Add New Member</span>
+                </div>
+                <div class="qa-card" onclick="window.location.href='product_managment.html'">
+                  <div class="qa-icon" ><i class="fa-solid fa-box"></i></div>
+                  <span class="qa-label">Add New Product</span>
+                </div>
+                <div class="qa-card"  onclick="window.location.href='ordermanagment.html'">
+                  <div class="qa-icon"><i class="fa-solid fa-cart-plus"></i></div>
+                  <span class="qa-label"> Edit Orders </span>
+                </div>
+                <div class="qa-card" onclick="window.location.href='Faqmanagement.html'">
+                  <div class="qa-icon"><i class="fa-solid fa-circle-question"></i></div>
+                  <span class="qa-label">Answer FAQ</span>
+                </div>
+              </div>
+            </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../JS/total_order.js"></script>
+  <script src="../JS/top_product.js"></script>
+  <script src="../JS/recent_orders.js"></script>
+  <script src="../JS/total_product.js"></script>
+  <script src="../JS/total_users.js"></script>
+  <script src="../JS/faq_count.js"></script>
+  <script src="../JS/admindashboard.js"></script>
+  <script>
+        // Read count immediately on page load
+        function refreshCount() {
+            var count = localStorage.getItem('gymCount') || 0;
+            document.getElementById('live-count').textContent = count;
+        }
+
+        refreshCount();
+
+        // Then keep refreshing every 5 seconds automatically
+        setInterval(refreshCount, 5000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment History</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/history.css">
+
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="history-container">
+
+        <header class="history-header">
+            <h1>Order History</h1>
+        </header>
+
+        <div class="table-wrapper">
+            <table class="payment-table">
+
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody id="orders-body">
+                    <tr>
+                        <td colspan="4">Loading...</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            </table>
+        </div>
+
+        <div class="btn-contan">
+            <a href="Dashboard.html">
+                <button class="btn btn-red">Go Back</button></a>
+        </div>
+
+    </main>
+
+    <script src="../Javascript/orderhistory.js"></script>
+</body>
+
+</html>

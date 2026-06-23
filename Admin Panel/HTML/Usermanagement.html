@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combat Fitness — User Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../CSS/dashboard.css">
+  <link rel="stylesheet" href="../CSS/Usermanagement.css">
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><i class="fa-solid fa-dumbbell"></i></div>
+        <div class="brand-text">
+          <span class="name">COMBAT FITNESS</span>
+          <span class="tag">Admin Console</span>
+        </div>
+      </div>
+      <nav class="nav-scroll">
+        <div class="nav-item " onclick="window.location.href='dashboard.html'"><i class="fa-solid fa-grid-2"></i>
+          Dashboard</div>
+
+        <div class="nav-section-label">Management</div>
+        <div class="nav-item active" onclick="window.location.href='usermanagement.html'"><i class="fa-solid fa-users"></i>
+          User Management </div>
+        <div class="nav-item" onclick="window.location.href='product_managment.html'"> <i
+            class="fa-solid fa-dumbbell"></i> Product Management </div>
+        <div class="nav-item" onclick="window.location.href='ordermanagment.html'"> <i
+            class="fa-solid fa-bag-shopping"></i> Order Management </div>
+        <div class="nav-item" onclick="window.location.href='Faqmanagement.html'"><i
+            class="fa-solid fa-circle-question"></i> FAQ Management</div>
+        <div class="nav-item" onclick="window.location.href='gym-scanner.html'"><i class="fa-solid fa-qrcode"></i>
+          Barcode Scanner</div>
+      </nav>
+      <div class="logout-row">
+        <a class="logout-btn" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <div class="page-title">User Management</div>
+          <span class="page-welcome">Manage all registered members</span>
+        </div>
+      </header>
+
+      <main class="content">
+        <div class="panel">
+
+          <div id="msg" class="msg"></div>
+
+          <div class="toolbar">
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="searchInput" placeholder="Search by name or email...">
+            </div>
+            <button class="add-btn" onclick="openAddModal()">
+              <i class="fa-solid fa-user-plus"></i> Add New User
+            </button>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Member ID</th>
+                <th>Phone</th>
+                <th>City</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="userTableBody">
+              <tr>
+                <td colspan="7" class="empty-state">Loading users...</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ADD / EDIT MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-title" id="modalTitle">Add New User</div>
+      <input type="hidden" id="userId">
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" id="f_name" placeholder="Full name">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="f_email" placeholder="Email address">
+        </div>
+        <div class="form-group">
+          <label>Member ID</label>
+          <input type="text" id="f_member_id" placeholder="Member ID">
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" id="f_phone" placeholder="Phone number">
+        </div>
+        <div class="form-group">
+          <label>Password <span class="label-note">(leave blank to keep existing)</span></label>
+          <input type="password" id="f_password" placeholder="New password">
+        </div>
+        <div class="form-group">
+          <label>Emergency Contact</label>
+          <input type="text" id="f_emergency" placeholder="Emergency contact">
+        </div>
+        <div class="form-group full">
+          <label>Address</label>
+          <input type="text" id="f_address" placeholder="Street address">
+        </div>
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" id="f_city" placeholder="City">
+        </div>
+        <div class="form-group">
+          <label>Province</label>
+          <input type="text" id="f_province" placeholder="Province">
+        </div>
+        <div class="form-group">
+          <label>Postal Code</label>
+          <input type="text" id="f_postal" placeholder="Postal code">
+        </div>
+        <div class="form-group">
+          <label>Bank</label>
+          <input type="text" id="f_bank" placeholder="Bank name">
+        </div>
+        <div class="form-group">
+          <label>Account Name</label>
+          <input type="text" id="f_account_name" placeholder="Account name">
+        </div>
+        <div class="form-group">
+          <label>Card Number</label>
+          <input type="text" id="f_card_number" placeholder="Card number">
+        </div>
+        <div class="form-group">
+          <label>Card Type</label>
+          <input type="text" id="f_card_type" placeholder="Visa / Mastercard">
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+        <button class="btn-save" onclick="saveUser()">Save User</button>
+      </div>
+    </div>
+  </div>
+  <script src="../JS/admindashboard.js"></script>
+  <script src="../JS/UserManagement.js"></script>
+
+</body>
+
+</html>

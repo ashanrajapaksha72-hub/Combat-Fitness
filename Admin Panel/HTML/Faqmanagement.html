@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combat Fitness — FAQ Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../CSS/dashboard.css">
+  <link rel="stylesheet" href="../CSS/FAQManagement.css">
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><i class="fa-solid fa-dumbbell"></i></div>
+        <div class="brand-text">
+          <span class="name">COMBAT FITNESS</span>
+          <span class="tag">Admin Console</span>
+        </div>
+      </div>
+      <nav class="nav-scroll">
+        <div class="nav-item " onclick="window.location.href='dashboard.html'"><i class="fa-solid fa-grid-2"></i>
+          Dashboard</div>
+
+        <div class="nav-section-label">Management</div>
+        <div class="nav-item" onclick="window.location.href='usermanagement.html'"><i class="fa-solid fa-users"></i>
+          User Management </div>
+        <div class="nav-item" onclick="window.location.href='product_managment.html'"> <i
+            class="fa-solid fa-dumbbell"></i> Product Management </div>
+        <div class="nav-item" onclick="window.location.href='ordermanagment.html'"> <i
+            class="fa-solid fa-bag-shopping"></i> Order Management </div>
+        <div class="nav-item active" onclick="window.location.href='Faqmanagement.html'"><i
+            class="fa-solid fa-circle-question"></i> FAQ Management</div>
+        <div class="nav-item" onclick="window.location.href='gym-scanner.html'"><i class="fa-solid fa-qrcode"></i>
+          Barcode Scanner</div>
+      </nav>
+      <div class="logout-row">
+        <a class="logout-btn" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <div class="page-title">FAQ Management</div>
+          <span class="page-welcome">View and answer member questions</span>
+        </div>
+      </header>
+
+      <main class="content">
+        <div class="panel">
+
+          <div id="msg" class="msg"></div>
+
+          <div class="toolbar">
+            <div class="filter-tabs">
+              <button class="filter-tab active" onclick="filterFAQ('all', this)">All</button>
+              <button class="filter-tab" onclick="filterFAQ('unanswered', this)">Unanswered</button>
+              <button class="filter-tab" onclick="filterFAQ('answered', this)">Answered</button>
+            </div>
+            
+            <button class="add-btn" onclick="openAddModal()">
+              <i class="fa-solid fa-plus"></i> Create FAQ
+            </button>
+
+          </div>
+
+          <div class="faq-list" id="faqList">
+            <div class="empty-state">Loading FAQs...</div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+  //FAQ create model
+  <!-- FAQ Modal Overlay -->
+<div id="faqModal" class="faq-overlay">
+  <div class="faq-box">
+
+    <!-- Header -->
+    <div class="faq-header">
+      <h2 class="faq-title">Create FAQ</h2>
+      <button class="faq-close" onclick="closeAddModal()">✕</button>
+    </div>
+
+    <!-- Status message (success/error) -->
+    <div id="faqMsg" class="faq-msg"></div>
+
+    <!-- Subject -->
+    <div class="faq-field">
+      <label class="faq-label">Subject</label>
+      <input id="faqSubject" class="faq-input" type="text" placeholder="e.g. About Delivery">
+    </div>
+
+    <!-- Question -->
+    <div class="faq-field">
+      <label class="faq-label">Question</label>
+      <input id="faqQuestion" class="faq-input" type="text" placeholder="e.g. How many days does delivery take?">
+    </div>
+
+    <!-- Answer -->
+    <div class="faq-field">
+      <label class="faq-label">Answer</label>
+      <textarea id="faqAnswer" class="faq-input faq-textarea" rows="4" placeholder="Type the answer here..."></textarea>
+    </div>
+
+    <!-- Buttons -->
+    <div class="faq-actions">
+      <button class="faq-btn faq-btn-cancel" onclick="closeAddModal()">Cancel</button>
+      <button class="faq-btn faq-btn-save" onclick="submitFaq()">Save FAQ</button>
+    </div>
+
+  </div>
+</div>
+<script src="../JS/admindashboard.js"></script>
+  <script src="../JS/FAQManagement.js"></script>
+  <script src="../JS/save_faq.js"></script>
+
+</body>
+
+</html>

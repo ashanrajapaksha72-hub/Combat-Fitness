@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+
+    <link rel="stylesheet" href="../CSS/product_managment.css">
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+
+
+        <!-- ============ SIDEBAR ============ -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-mark"><i class="fa-solid fa-dumbbell"></i></div>
+                <div class="brand-text">
+                    <span class="name">COMBAT FITNESS</span>
+                    <span class="tag">Admin Console</span>
+                </div>
+            </div>
+
+            <nav class="nav-scroll">
+                <div class="nav-item " onclick="window.location.href='dashboard.html'"><i
+                        class="fa-solid fa-grid-2"></i> Dashboard</div>
+
+                <div class="nav-section-label">Management</div>
+                <div class="nav-item" onclick="window.location.href='usermanagement.html'"><i
+                        class="fa-solid fa-users"></i> User Management </div>
+                <div class="nav-item active" onclick="window.location.href='product_managment.html'"> <i product_managment.html
+                        class="fa-solid fa-dumbbell"></i> Product Management </div>
+                <div class="nav-item" onclick="window.location.href='ordermanagment.html'"> <i
+                        class="fa-solid fa-bag-shopping"></i> Order Management </div>
+                <div class="nav-item" onclick="window.location.href='Faqmanagement.html'"><i
+                        class="fa-solid fa-circle-question"></i> FAQ Management</div>
+                <div class="nav-item" onclick="window.location.href='gym-scanner.html'"><i
+                        class="fa-solid fa-qrcode"></i>
+                    Barcode Scanner</div>
+            </nav>
+
+            <div class="logout-row">
+                <a class="logout-btn" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="page-header">
+
+                <div>
+                    <h1>Product Management</h1>
+                    <p>Manage all products in your store</p>
+                </div>
+
+                <button class="add-btn" onclick="window.location.href='add_product.html'">
+                    <i class="fa-solid fa-plus"></i>
+                    Add New Product
+                </button>
+
+            </div>
+
+            <div class="table-card">
+
+                <table id="productsTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Brand</th>
+                            <th>Price (Rs.)</th>
+                            <th>In Stock</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- rows inserted here by jQuery -->
+                    </tbody>
+                </table>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../JS/admindashboard.js"></script>
+    <script src="../JS/get_products.js"></script>
+    <script src="../JS/delete_product.js"></script>
+</body>
+
+</html>

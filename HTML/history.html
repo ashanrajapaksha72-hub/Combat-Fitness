@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment History</title>
+    <link rel="stylesheet" href="../CSS/history.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="history-container">
+
+        <header class="history-header">
+            <h1>Payment History</h1>
+        </header>
+
+        <div class="table-wrapper">
+            <table class="payment-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Plan</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="history-tbody">
+                    <tr>
+                        <td colspan="6" style="text-align:center;">Loading...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="btn-contan">
+            <a href="Dashboard.html">
+                <button class="btn btn-red">Go Back</button>
+            </a>
+        </div>
+
+    </main>
+
+    <script src="../Javascript/payment_history.js"></script>
+</body>
+</html>

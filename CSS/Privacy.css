@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    text-decoration:none;
+}
+
+body{
+    background:black;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ================= HEADER ================= */
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100px;
+    background:#3b3b3b;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+    z-index:100;
+    border-bottom:4px solid red;
+}
+
+.logo{
+    font-size:45px;
+    font-weight:bold;
+    line-height:1;
+    font-family: Impact;
+    letter-spacing: 1px;
+}
+
+.logo span{
+    color:red;
+    font-size:45px;
+    font-family: Impact;
+    letter-spacing: 1px;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+}
+
+nav a{
+    background:red;
+    border-radius:40px;
+    padding:4px 12px;
+    color:white;
+    margin-left:20px;
+    font-size:15px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:white;
+    color:red;
+}
+
+.cart-icon{
+    background:none;
+    padding:0;
+
+}
+
+.user-icon{
+    background:none;
+    padding:0;
+}
+
+.cart-icon:hover{
+    background:none;
+
+}
+
+
+.user-icon:hover{
+    background:none;
+}
+
+.cart-icon{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.cart-icon img{
+    width:25px;
+}
+
+.user-icon img{
+    width:22px;
+    margin-left:15px;
+}
+
+/* ================= MAIN SECTION ================= */
+.main{
+    position:relative;
+    width:100%;
+    padding-bottom:100px;
+}
+
+/* BACKGROUND IMAGE */
+.mainbg{
+    position:absolute;
+    top: 0px;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-1;
+    filter:brightness(35%);
+}
+
+.main-content{
+    padding: 120px 0;
+}
+
+/* ================= TITLE ================= */
+.main-content h1{
+    font-family: Impact;
+    margin-left: 140px;
+    text-align:left;
+    font-size:70px;
+    color:red;
+    margin-bottom:30px;
+    letter-spacing:1px;
+}
+
+/* ================= GRID ================= */
+.cards-container{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:50px;
+    padding:50px 8%;
+}
+
+/* ================= CARD STYLE ================= */
+.card{
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,0.15),
+        rgba(0,0,0,0.6)
+    );
+    padding:30px;
+    border-radius:25px;
+    backdrop-filter:blur(12px);
+    transition:0.3s;
+}
+
+
+/* TEXT */
+.card h2{
+    font-family: Impact;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.card p{
+    line-height:1.6;
+    font-size:16px;
+}
+
+/* LIST */
+.card ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+.card li{
+    margin-bottom:8px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:768px){
+
+    .main-content h1{
+        font-size:40px;
+    }
+
+    .cards-container{
+        grid-template-columns:1fr;
+        padding:30px 5%;
+    }
+
+    nav{
+        display:none;
+    }
+}
+
+.footer-container {
+    background-color: #121212;
+    color: #ccc;
+    padding: 60px 5% 20px;
+    font-family: sans-serif; /* Adjust to match your site's font */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1.2fr 0.8fr 0.8fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    font-family: Impact;
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+    color:red; /* Red color from image */
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.footer-section h2{
+    font-family: Impact;
+    letter-spacing: 0.5px;
+    font-weight: lighter;
+}
+.footer-section h2 span{
+    font-family: Impact;
+    color:red;
+    font-weight: lighter;
+    letter-spacing: 0.5px;
+
+}
+.about p {
+    font-family: Impact;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Icons and Links */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    font-family: Impact;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+    color: #ccc;
+}
+
+
+.footer-section ul li a {
+    font-family: Impact;
+    color: #ccc;
+    text-decoration: none;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-bottom hr {
+    border: 0;
+    border-top: 1px solid #222;
+    margin-bottom: 20px;
+}
+
+.footer-bottom p {
+    font-family: Impact;
+    font-weight: lighter;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    color: #666;
+}

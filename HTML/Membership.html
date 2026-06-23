@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Profile</title>
+    <link rel="stylesheet" href="../CSS/Membership.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            COMBAT<span>FITNESS</span>
+        </div>
+
+        <nav>
+            <a href="Homepage.html">Home</a>
+            <a href="Dashboard.html" id="Dashboard-link">Dashboard</a>
+            <a href="plans.html" id="plans-link">Membership Plans</a>
+            <a href="Store.html" id="store-link">Store</a>
+            <a href="Aboutus.html">About Us</a>
+            <a href="add to cart.html" class="cart-icon" id="cart-link">
+                <img src="../Images/cart (2).png" alt="Cart-Icon">Cart
+            </a>
+            <a href="Membership.html" class="user-icon" id="user-link">
+                <img src="../Images/usericon.svg" alt="User Profile">
+            </a>
+        </nav>
+    </header>
+
+    <main class="profile-grid">
+        <img src="../Images/planbg.jpg" class="bg-main">
+
+        <!-- Left Column -->
+        <div>
+            <div class="card">
+                <div class="avatar">
+                    <img src="../Images/planuser.png" alt="Profile Picture">
+                </div>
+                <div class="firstcard">
+                    <p>Membership ID: <span id="user-id"></span></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Contact Details</h2>
+                <p>Name: <span id="user-name"></span></p>
+                <p>Phone: <span id="user-phone"></span></p>
+                <p>Email: <span id="user-email"></span></p>
+                <p>Emergency contact: <span id="user-emergency"></span></p>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div>
+            <div class="card">
+                <h2>Address</h2>
+                <p>Home address: <span id="user-address"></span></p>
+                <p>Province: <span id="user-province"></span></p>
+                <p>City: <span id="user-city"></span></p>
+                <p>Postal Code: <span id="user-postal"></span></p>
+            </div>
+
+            <div class="card">
+                <h2>Banking Details</h2>
+                <p>Bank Name: <span id="user-bank"></span></p>
+                <p>Account Holder Name: <span id="user-account"></span></p>
+                <p>Card Number: <span id="user-card"></span></p>
+                <p>Card Type: <span id="user-card-type"></span></p>
+            </div>
+
+            <div class="button-group">
+                <a href="orderhistory.html" style="text-decoration: none;">
+                    <button type="button">Order History</button>
+                </a>
+                <a href="EditProfile.html" style="text-decoration: none;">
+                    <button type="button" class="btn-edit">Edit Profile</button>
+                </a>
+                <button type="button" class="btn-edit" onclick="logout()">Sign Out</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>COMBAT <span>FITNESS</span></h2>
+                <p>Combat Fitness is dedicated to helping you achieve your fitness goals with premium gym services,
+                    high-quality supplements, and performance-driven apparel. We combine strength, discipline, and
+                    community to empower every individual on their fitness journey.</p>
+            </div>
+
+            <div class="footer-section contact">
+                <h3>Get in Touch</h3>
+                <ul>
+                    <li>Gym Location - No.123, Yatinuwara Weediya , Kandy</li>
+                    <li>Tel - 081-2490345</li>
+                    <li>WhatsApp - 076-3406790</li>
+                </ul>
+            </div>
+
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="Homepage.html">Home</a></li>
+                    <li><a href="plans.html" id="plans-link">Membership Plans</a></li>
+                    <li><a href="Aboutus.html" id="about-link">About Us</a></li>
+                    <li><a href="Privacy.html" id="user-policy">Privacy Policy</a></li>
+                    <li><a href="Terms.html" id="user-term">Terms & Conditions</a></li>
+                    <li><a href="faqpage.html" id="user-Faq">FAQ </a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section services">
+                <h3>Services</h3>
+                <ul>
+                    <li>Personal Training</li>
+                    <li>Customized Diet Plans</li>
+                    <li>Supplement Guidance</li>
+                    <li>Workout Accessories</li>
+                    <li>Recovery & Stretching Guidance</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <hr>
+            <p>&copy; 2024 All rights reserved. COMBAT FITNESS</p>
+        </div>
+    </footer>
+
+    <!-- jQuery MUST be first -->
+
+
+    <!-- Logout function -->
+    <script>
+        function logout() {
+            fetch("../PHP/logout.php", {
+                method: "GET"
+            })
+                .then(function () {
+                    window.location.replace("Homepage.html");
+                })
+                .catch(function (error) {
+                    console.error("Logout failed:", error);
+                });
+        }
+    </script>
+
+    <!-- Your JS files -->
+    <script src="../Javascript/membership.js"></script>
+    <script src="../Javascript/loginchecker.js"></script>
+
+</body>
+
+</html>

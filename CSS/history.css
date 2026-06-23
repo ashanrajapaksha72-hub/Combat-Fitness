@@ -1,0 +1,149 @@
+/* Reset + Default Font (Poppins for everything) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../Images/equipment.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+/* Container */
+.history-container {
+    width: 100%;
+    max-width: 1100px;
+    background: #3b3b3b;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.history-header h1 {
+    text-align: center;
+    font-family: Impact;
+    font-size: 32px;
+    color: #f82121;
+    margin-bottom: 25px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Table */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+/* Header row */
+.payment-table thead tr {
+    background-color: #3b3b3b;
+}
+
+.payment-table th {
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #b89494;
+    text-transform: capitalize;
+}
+
+/* Body rows */
+.payment-table td {
+    padding: 20px 16px;
+    font-size: 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Status */
+.status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status.proceed::before {
+    background-color: hwb(142 4% 27%);
+}
+
+.status.canceled::before {
+    background-color: #ef4444
+}
+
+.status.on-hold::before {
+    background-color: #eab308;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 30px;
+    gap: 8px;
+}
+
+.page-btn,
+.next-btn {
+    border: none;
+    background: transparent;
+    padding: 8px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+    color: #64748b;
+}
+
+.page-btn.active {
+    background-color: #f63b3b;
+    color: white;
+}
+
+.page-btn:hover:not(.active) {
+    background-color: #f1f5f9;
+}
+
+.btn-contan{
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 15px 35px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-red {
+    background: red;
+    color: white;
+}

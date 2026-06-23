@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Combat Fitness</title>
+    <link rel="stylesheet" href="../CSS/checkout_member.css">
+</head>
+<body>
+
+<main class="checkout-wrapper">
+    <div class="breadcrumb" onclick="window.location.href='plans.html'">Go Back</div>
+
+    <div class="checkout-grid">
+
+        <!-- LEFT — Form -->
+        <div class="left-col">
+
+            <div class="card">
+                <h2>PERSONAL DETAILS</h2>
+                <hr>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>NAME</label>
+                        <input type="text" id="name" placeholder="Full Name">
+                    </div>
+                    <div class="input-group">
+                        <label>MEMBER ID</label>
+                        <input type="text" id="member_id" placeholder="Member ID" readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>EMAIL</label>
+                        <input type="email" id="email" placeholder="john@example.com" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label>PHONE</label>
+                        <input type="text" id="phone" placeholder="07X XXXXXXX">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>PAYMENT METHOD</h2>
+                <hr>
+
+                <div class="payment-option selected" id="card-option">
+                    <input type="radio" name="payment" checked>
+                    <div>
+                        <strong>💳 Credit / Debit Card</strong>
+                        <small>Visa, Mastercard</small>
+                    </div>
+                </div>
+
+                <div class="card-details">
+                    <div class="card-badges">
+                        <span class="badge visa">VISA</span>
+                        <span class="badge master">MASTER</span>
+                    </div>
+                    <div class="input-group">
+                        <label>CARDHOLDER NAME</label>
+                        <input type="text" id="card_name" placeholder="Name on card">
+                    </div>
+                    <div class="input-group">
+                        <label>CARD NUMBER</label>
+                        <input type="text" id="card_number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19">
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>EXPIRY DATE</label>
+                            <input type="text" id="expiry" placeholder="MM / YY" maxlength="7">
+                        </div>
+                        <div class="input-group">
+                            <label>CVV</label>
+                            <input type="password" id="cvv" placeholder="•••" maxlength="3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT — Order Summary -->
+        <div class="right-col">
+            <div class="card summary-card">
+                <h2>ORDER SUMMARY</h2>
+                <hr>
+
+                <div class="plan-summary">
+                    <p class="plan-name" id="summary-plan">--</p>
+                    <p class="plan-duration">Monthly Plan</p>
+                </div>
+
+                <hr>
+
+                <div class="summary-row">
+                    <span>Plan Price</span>
+                    <span id="summary-price">Rs. 0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Registration Fee</span>
+                    <span>Rs. 0.00</span>
+                </div>
+                <hr>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="summary-total" class="red-text">Rs. 0.00</span>
+                </div>
+
+                <button class="btn-pay" id="payBtn">PAY NOW</button>
+                <p class="secure-text">🔒 Your information is safe and secure</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+<script src="../Javascript/checkout_membership.js"></script>
+</body>
+</html>

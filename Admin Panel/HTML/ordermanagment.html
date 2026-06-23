@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order-Managment</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+    <link rel="stylesheet" href="../CSS/ordermanagement.css">
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-mark"><i class="fa-solid fa-dumbbell"></i></div>
+                <div class="brand-text">
+                    <span class="name">COMBAT FITNESS</span>
+                    <span class="tag">Admin Console</span>
+                </div>
+            </div>
+
+            <nav class="nav-scroll">
+                <div class="nav-item " onclick="window.location.href='dashboard.html'"><i
+                        class="fa-solid fa-grid-2"></i> Dashboard</div>
+
+                <div class="nav-section-label">Management</div>
+                <div class="nav-item" onclick="window.location.href='usermanagement.html'"><i
+                        class="fa-solid fa-users"></i> User Management </div>
+                <div class="nav-item" onclick="window.location.href='product_managment.html'"> <i
+                        class="fa-solid fa-dumbbell"></i> Product Management </div>
+                <div class="nav-item active" onclick="window.location.href='ordermanagment.html'"> <i
+                        class="fa-solid fa-bag-shopping"></i> Order Management </div>
+                <div class="nav-item" onclick="window.location.href='Faqmanagement.html'"><i
+                        class="fa-solid fa-circle-question"></i> FAQ Management</div>
+                <div class="nav-item" onclick="window.location.href='gym-scanner.html'"><i
+                        class="fa-solid fa-qrcode"></i>
+                    Barcode Scanner</div>
+            </nav>
+
+            <div class="logout-row">
+                <a class="logout-btn" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+            </div>
+        </aside>
+
+        <div class="content">
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">Order Management</h1>
+                    <span class="breadcrumb">
+                        Order Management
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Stats -->
+            <div class="stat-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+
+                    <div>
+                        <div class="stat-label">Total Orders</div>
+                        <div class="stat-value" id="stat-total-orders"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <div class="stat-label">Pending Orders</div>
+                        <div class="stat-value" id="stat-pending-orders"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <div>
+                        <div class="stat-label">Confirmed Orders</div>
+                        <div class="stat-value" id="stat-confirmed-orders"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-truck"></i></div>
+                    <div>
+                        <div class="stat-label">Ready Orders</div>
+                        <div class="stat-value" id="stat-ready-orders"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div>
+                        <div class="stat-label">Completed Orders</div>
+                        <div class="stat-value" id="stat-completed-orders"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Orders Panel -->
+            <div class="panel">
+
+                <!-- Orders Table -->
+                <table class="orders-table">
+
+                    <thead>
+                        <tr>
+                            <th>Order #</th>
+                            <th>Customer</th>
+                            <th>Total</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- rows are inserted here by orders_table.js -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <script src="../JS/order_table.js"></script>
+            <script src="../JS/admindashboard.js"></script>
+            <script src="../JS/status_count.js"></script>
+            <script src="../JS/total_order.js"></script>
+            <script src="../JS/delete_order.js"></script>
+            <script>
+                // --- Edit order button ---
+                // Uses event delegation since rows are dynamically added
+                document.addEventListener('click', function (e) {
+                    var btn = e.target.closest('.orders-table .action-btn.edit');
+                    if (!btn) return;
+
+                    var orderId = btn.dataset.id;
+                    window.location.href = 'edit_order.html?order_id=' + orderId;
+                });
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
