@@ -113,6 +113,10 @@ Only accounts with `role = admin` can access admin features.
 Cybersecurity Student @ SLIIT | University of Bedfordshire
 🔗 GitHub: https://github.com/ashanrajapaksha72-hub
 
+**Theekshana Illangakoon**
+Cybersecurity Student @ SLIIT | University of Bedfordshire
+🔗 GitHub: https://github.com/Theekshana007
+
 ---
 
 > *First year university project — built with HTML, CSS, JavaScript, PHP & MySQL*
